@@ -1,0 +1,19 @@
+.setDeadline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.openButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datePicker {
+  position: absolute;
+  top: 30px;
+  z-index: 99;
+}

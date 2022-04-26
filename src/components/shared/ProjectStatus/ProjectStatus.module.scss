@@ -1,0 +1,13 @@
+.status {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+
+  &.inProgress {
+    background: #8bc34a;
+  }
+
+  &.completed {
+    background: #03a9f4;
+  }
+}

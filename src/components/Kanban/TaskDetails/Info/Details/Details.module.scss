@@ -1,0 +1,38 @@
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(4, 36px);
+  align-items: center;
+  gap: 10px 50px;
+  padding: 0 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #96999c;
+}
+
+.executor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.executorAvatar {
+  width: 28px;
+  height: 28px;
+}
+
+.executorName {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #333333;
+}
+
+.deadline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ 

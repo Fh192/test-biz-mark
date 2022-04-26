@@ -1,0 +1,43 @@
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.authorName {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.date {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b7b9bb;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}

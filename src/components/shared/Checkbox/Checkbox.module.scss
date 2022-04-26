@@ -1,0 +1,36 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.input {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #808080;
+  transition: all 0.3s ease;
+
+  &:checked {
+    & ~ .checkMark {
+      filter: brightness(1);
+    }
+
+    border-color: #8bc34a;
+    background: #8bc34a;
+  }
+}
+
+.checkMark {
+  position: absolute;
+  filter: brightness(0.5);
+  transition: all 0.3s ease;
+}

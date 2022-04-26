@@ -1,0 +1,18 @@
+.addSubtask {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  width: 100%;
+  border-top: 1px solid #f2f5fa;
+}
+
+.input {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+
+  &::placeholder {
+    color: #808080;
+  }
+}

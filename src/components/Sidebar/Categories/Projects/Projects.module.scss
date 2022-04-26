@@ -1,0 +1,28 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #b7b9bb;
+}
+
+.openFullList {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #b7b9bb;
+  }
+}

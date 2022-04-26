@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}

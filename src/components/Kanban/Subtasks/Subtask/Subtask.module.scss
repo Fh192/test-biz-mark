@@ -1,0 +1,29 @@
+.subtask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 15px;
+  transition: opacity 0.3s ease;
+  border-top: 1px solid #f1f1f1;
+
+  &.completed {
+    opacity: 0.5;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+}
