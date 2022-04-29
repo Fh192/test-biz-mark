@@ -9,11 +9,11 @@ interface Props {
 
 export const Deadline: React.FC<Props> = ({ deadline }) => {
   const cx = classNames.bind(styles);
-  const { dateAsDayMonth, dateInPast } = useDate(deadline);
+  const { dayMonthDate, dateInPast } = useDate(deadline);
 
   return (
     <span className={cx(['deadline'], { deadlineExpired: dateInPast })}>
-      до {dateAsDayMonth}
+      до {dayMonthDate}
     </span>
   );
 };

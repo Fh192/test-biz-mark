@@ -15,7 +15,7 @@ export const Details: React.FC<Props> = ({
   description,
 }) => {
   const { name: projectName } = useSelector(getCurrentProject);
-  const { dateFull } = useDate(deadline);
+  const { fullDate } = useDate(deadline);
 
   return (
     <div className={styles.details}>
@@ -28,7 +28,7 @@ export const Details: React.FC<Props> = ({
       <h3 className={styles.rowName}>Даты</h3>
       <div className={styles.deadline}>
         <SetDeadline deadline={deadline} deadlineFor='tasks' id={id} />
-        <span>{dateFull}</span>
+        <span>{fullDate}</span>
       </div>
 
       <h3 className={styles.rowName}>Проект</h3>

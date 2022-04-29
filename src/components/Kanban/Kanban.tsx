@@ -3,9 +3,10 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useDispatch } from 'react-redux';
 import filterIcon from '../../assets/filter.svg';
 import sortIcon from '../../assets/sort.svg';
-import { useDate, useSelector } from '../../hooks';
+import { useSelector } from '../../hooks';
 import { reorderTasks } from '../../store/reducers/kanbanSlice';
 import { getLastTaskCompletionDate } from '../../store/selectors/kanban';
+import { transformDate } from '../../utils/transformDate';
 import { AddColumn } from './AddColumn/AddColumn';
 import { Column } from './Column/Column';
 import styles from './Kanban.module.scss';
@@ -15,7 +16,6 @@ export const Kanban: React.FC = () => {
 
   const { columnsOrder } = useSelector(s => s.kanban);
   const lastTaskCompletionDate = useSelector(getLastTaskCompletionDate);
-  const { dateAsDayMonth } = useDate(lastTaskCompletionDate);
 
   const dragEndHandler = (result: DropResult) => {
     if (!result.destination) return;
@@ -36,8 +36,12 @@ export const Kanban: React.FC = () => {
     <section className={styles.kanban}>
       <header className={styles.header}>
         <h3 className={styles.lastTask}>
-          Последняя задача выполнена {dateAsDayMonth}
+          {lastTaskCompletionDate
+            ? `Последняя задача выполнена
+          ${transformDate(lastTaskCompletionDate).dayMonthDate}`
+            : 'Нет выполненных задач'}
         </h3>
+
         <div className={styles.toolbar}>
           <button>
             <img src={filterIcon} alt='' />

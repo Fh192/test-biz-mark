@@ -34,7 +34,7 @@ export const getSpentTime =
     return getTaskTime(id)(state).spent;
   };
 
-export const getLastTaskCompletionDate = (state: RootState): string => {
+export const getLastTaskCompletionDate = (state: RootState): string | null => {
   const tasks = Object.values(state.kanban.tasks);
   const dates: number[] = [];
 
@@ -47,6 +47,6 @@ export const getLastTaskCompletionDate = (state: RootState): string => {
   if (dates.length) {
     return new Date(Math.max(...dates)).toISOString();
   } else {
-    return '';
+    return null;
   }
 };
