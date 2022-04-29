@@ -3,7 +3,10 @@
   font-size: 14px;
   line-height: 19px;
   color: #b7b9bb;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .active {
   color: #4f6ea3;
   text-decoration: underline #4f6ea3 2px;

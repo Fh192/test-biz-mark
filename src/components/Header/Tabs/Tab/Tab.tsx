@@ -1,13 +1,19 @@
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import React from 'react';
 import styles from './Tab.module.scss';
 
 interface Props {
   title: string;
+  active: boolean;
+  setActive: () => void;
 }
 
-export const Tab: React.FC<Props> = ({ title }) => {
+export const Tab: React.FC<Props> = ({ title, active, setActive }) => {
   const cx = classNames.bind(styles);
 
-  return <li className={styles.tab}>{title}</li>;
+  return (
+    <li className={cx('tab', { active })} onClick={setActive}>
+      {title}
+    </li>
+  );
 };
