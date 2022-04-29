@@ -33,9 +33,9 @@ export const useTimer = (taskId: string) => {
 
   useEffect(() => {
     return () => {
-      stop();
+      if (started) stop();
     };
-  }, []);
+  }, [started]);
 
   return { started, start, stop, toggleTimer };
 };
