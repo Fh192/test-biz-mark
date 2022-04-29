@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-biz-mark/static/css/main.f61487a3.css",
-    "main.js": "/test-biz-mark/static/js/main.0f0b1515.js",
+    "main.css": "/test-biz-mark/static/css/main.f2c24a2d.css",
+    "main.js": "/test-biz-mark/static/js/main.a1c63165.js",
     "static/media/avatar3.svg": "/test-biz-mark/static/media/avatar3.71094cd9cc82121b12184ac92ab69734.svg",
     "static/media/avatar2.svg": "/test-biz-mark/static/media/avatar2.30252af0e1cfacdc93eb9ea5c9a0f98c.svg",
     "static/media/avatar1.svg": "/test-biz-mark/static/media/avatar1.c0598f544bdafa3f291d34d7a276c7ef.svg",
@@ -27,11 +27,11 @@
     "static/media/arrowVertical.svg": "/test-biz-mark/static/media/arrowVertical.0cff1532254690b389b6e81d4940aca2.svg",
     "static/media/arrow.svg": "/test-biz-mark/static/media/arrow.36414f1e4d49808ccdc842eac7a94d28.svg",
     "static/media/checkMark.svg": "/test-biz-mark/static/media/checkMark.7b4cbf91cac988fba7ff289c87e9dd09.svg",
-    "main.f61487a3.css.map": "/test-biz-mark/static/css/main.f61487a3.css.map",
-    "main.0f0b1515.js.map": "/test-biz-mark/static/js/main.0f0b1515.js.map"
+    "main.f2c24a2d.css.map": "/test-biz-mark/static/css/main.f2c24a2d.css.map",
+    "main.a1c63165.js.map": "/test-biz-mark/static/js/main.a1c63165.js.map"
   },
   "entrypoints": [
-    "static/css/main.f61487a3.css",
-    "static/js/main.0f0b1515.js"
+    "static/css/main.f2c24a2d.css",
+    "static/js/main.a1c63165.js"
   ]
 }
