@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-biz-mark/static/css/main.e9634ecc.css",
-    "main.js": "/test-biz-mark/static/js/main.981166ca.js",
+    "main.css": "/test-biz-mark/static/css/main.2457a237.css",
+    "main.js": "/test-biz-mark/static/js/main.cd1263bb.js",
     "static/media/avatar3.svg": "/test-biz-mark/static/media/avatar3.71094cd9cc82121b12184ac92ab69734.svg",
     "static/media/avatar2.svg": "/test-biz-mark/static/media/avatar2.30252af0e1cfacdc93eb9ea5c9a0f98c.svg",
     "static/media/avatar1.svg": "/test-biz-mark/static/media/avatar1.c0598f544bdafa3f291d34d7a276c7ef.svg",
@@ -12,8 +12,8 @@
     "static/media/bell.svg": "/test-biz-mark/static/media/bell.b26342c3bdd7cca8da3783a04b31ac05.svg",
     "static/media/branch.svg": "/test-biz-mark/static/media/branch.fa7eb953eb66fb1c2ee4d724b889150e.svg",
     "static/media/playActive.svg": "/test-biz-mark/static/media/playActive.84a82e3170dd361e2006f4ab867c2120.svg",
-    "static/media/calendar.svg": "/test-biz-mark/static/media/calendar.b16e830d92ceb3610d4728b2c0137e7f.svg",
     "index.html": "/test-biz-mark/index.html",
+    "static/media/calendar.svg": "/test-biz-mark/static/media/calendar.b16e830d92ceb3610d4728b2c0137e7f.svg",
     "static/media/checkMark1.svg": "/test-biz-mark/static/media/checkMark1.03ee4144f710efbbd0af9ed10a5140ea.svg",
     "static/media/home.svg": "/test-biz-mark/static/media/home.88d5995239b0eeb71f5e1d2823da4c27.svg",
     "static/media/moon.svg": "/test-biz-mark/static/media/moon.c4f34b3b0afdd801cf578f8dc0a76635.svg",
@@ -27,11 +27,11 @@
     "static/media/arrowVertical.svg": "/test-biz-mark/static/media/arrowVertical.0cff1532254690b389b6e81d4940aca2.svg",
     "static/media/arrow.svg": "/test-biz-mark/static/media/arrow.36414f1e4d49808ccdc842eac7a94d28.svg",
     "static/media/checkMark.svg": "/test-biz-mark/static/media/checkMark.7b4cbf91cac988fba7ff289c87e9dd09.svg",
-    "main.e9634ecc.css.map": "/test-biz-mark/static/css/main.e9634ecc.css.map",
-    "main.981166ca.js.map": "/test-biz-mark/static/js/main.981166ca.js.map"
+    "main.2457a237.css.map": "/test-biz-mark/static/css/main.2457a237.css.map",
+    "main.cd1263bb.js.map": "/test-biz-mark/static/js/main.cd1263bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9634ecc.css",
-    "static/js/main.981166ca.js"
+    "static/css/main.2457a237.css",
+    "static/js/main.cd1263bb.js"
   ]
 }
