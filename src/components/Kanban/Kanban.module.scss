@@ -4,17 +4,6 @@
   height: 100%;
 }
 
-.columns {
-  display: grid;
-  gap: 10px;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fill, 310px);
-  padding-top: 15px;
-  margin: 0 20px;
-  height: 100%;
-  overflow-x: auto;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -26,18 +15,4 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 27px;
-}
-
-.toolbar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  button {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    line-height: 27px;
-    padding: 0 5px;
-  }
 }

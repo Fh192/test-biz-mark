@@ -40,7 +40,7 @@ export const getLastTaskCompletionDate = (state: RootState): string | null => {
 
   tasks.forEach(({ completionDate }) => {
     if (completionDate) {
-      dates.push(Number(new Date(completionDate)));
+      dates.push(+new Date(completionDate));
     }
   });
 

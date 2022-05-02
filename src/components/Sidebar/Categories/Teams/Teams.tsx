@@ -2,11 +2,11 @@ import React from 'react';
 import { Team } from './Team/Team';
 import styles from './Teams.module.scss';
 
-interface Team {
+interface ITeam {
   name: string;
 }
 
-const teams: Team[] = [
+const teams: ITeam[] = [
   { name: 'Программисты' },
   { name: 'Маркетологи' },
   { name: 'Дизайнеры' },

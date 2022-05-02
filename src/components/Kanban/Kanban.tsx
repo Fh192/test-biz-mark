@@ -1,67 +1,17 @@
 import React from 'react';
-import { DragDropContext, DropResult } from 'react-beautiful-dnd';
-import { useDispatch } from 'react-redux';
-import filterIcon from '../../assets/filter.svg';
-import sortIcon from '../../assets/sort.svg';
-import { useSelector } from '../../hooks';
-import { reorderTasks } from '../../store/reducers/kanbanSlice';
-import { getLastTaskCompletionDate } from '../../store/selectors/kanban';
-import { transformDate } from '../../utils/transformDate';
-import { AddColumn } from './AddColumn/AddColumn';
-import { Column } from './Column/Column';
+import { Columns } from './Columns/Columns';
 import styles from './Kanban.module.scss';
+import { LastTaskCompletionDate } from './LastTaskCompletionDate/LastTaskCompletionDate';
+import { Toolbar } from './Toolbar/Toolbar';
 
 export const Kanban: React.FC = () => {
-  const dispatch = useDispatch();
-
-  const { columnsOrder } = useSelector(s => s.kanban);
-  const lastTaskCompletionDate = useSelector(getLastTaskCompletionDate);
-
-  const dragEndHandler = (result: DropResult) => {
-    if (!result.destination) return;
-
-    const { source, destination } = result;
-
-    dispatch(
-      reorderTasks({
-        index: source.index,
-        droppableIndex: destination.index,
-        columnId: source.droppableId,
-        droppableColumnId: destination.droppableId,
-      })
-    );
-  };
-
   return (
     <section className={styles.kanban}>
       <header className={styles.header}>
-        <h3 className={styles.lastTask}>
-          {lastTaskCompletionDate
-            ? `Последняя задача выполнена
-          ${transformDate(lastTaskCompletionDate).dayMonthDate}`
-            : 'Нет выполненных задач'}
-        </h3>
-
-        <div className={styles.toolbar}>
-          <button>
-            <img src={filterIcon} alt='' />
-            Фильтрация
-          </button>
-          <button>
-            <img src={sortIcon} alt='' />
-            Сортировка
-          </button>
-        </div>
+        <LastTaskCompletionDate />
+        <Toolbar />
       </header>
-
-      <DragDropContext onDragEnd={dragEndHandler}>
-        <ul className={styles.columns}>
-          {columnsOrder.map(columnId => (
-            <Column columnId={columnId} key={columnId} />
-          ))}
-          <AddColumn />
-        </ul>
-      </DragDropContext>
+      <Columns />
     </section>
   );
 };

@@ -1,7 +1,8 @@
 import React from 'react';
-import { useDate, useSelector } from '../../../../../hooks';
+import { useSelector } from '../../../../../hooks';
 import { getCurrentProject } from '../../../../../store/selectors/project';
 import { ITask } from '../../../../../types/task';
+import { transformDate } from '../../../../../utils/transformDate';
 import { SetDeadline } from '../../../SetDeadline/SetDeadline';
 import { Description } from './Description/Description';
 import styles from './Details.module.scss';
@@ -15,7 +16,6 @@ export const Details: React.FC<Props> = ({
   description,
 }) => {
   const { name: projectName } = useSelector(getCurrentProject);
-  const { fullDate } = useDate(deadline);
 
   return (
     <div className={styles.details}>
@@ -28,7 +28,7 @@ export const Details: React.FC<Props> = ({
       <h3 className={styles.rowName}>Даты</h3>
       <div className={styles.deadline}>
         <SetDeadline deadline={deadline} deadlineFor='tasks' id={id} />
-        <span>{fullDate}</span>
+        <span>{transformDate(deadline).fullDate}</span>
       </div>
 
       <h3 className={styles.rowName}>Проект</h3>

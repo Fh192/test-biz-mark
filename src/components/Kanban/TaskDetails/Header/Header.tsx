@@ -14,7 +14,7 @@ interface Props extends Pick<ITask, 'time' | 'id' | 'completed'> {
   close: () => void;
 }
 
-export const Header: React.FC<Props> = ({ id, time, completed, close }) => {
+export const Header: React.FC<Props> = ({ id, completed, close }) => {
   const cx = classNames.bind(styles);
   const dispatch = useDispatch();
 

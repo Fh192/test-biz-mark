@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from '../../../../hooks';
-import { addTask } from '../../../../store/reducers/kanbanSlice';
-import { getColumnTasks } from '../../../../store/selectors/kanban';
-import { ITaskToAdd } from '../../../../types/task';
+import { useDispatch, useSelector } from '../../../../../hooks';
+import { addTask } from '../../../../../store/reducers/kanbanSlice';
+import { getColumnTasks } from '../../../../../store/selectors/kanban';
+import { ITaskToAdd } from '../../../../../types/task';
 import { Task } from './Task/Task';
 import styles from './Tasks.module.scss';
 
@@ -27,10 +27,7 @@ export const Tasks: React.FC<Props> = ({ columnId, placeholder }) => {
     if (e.key === 'Enter' && taskTitle) {
       const partialTask: ITaskToAdd = {
         title: taskTitle,
-        executor: {
-          avatar,
-          name,
-        },
+        executor: { avatar, name },
       };
 
       dispatch(addTask({ columnId, partialTask }));

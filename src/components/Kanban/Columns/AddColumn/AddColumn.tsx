@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import plusIcon from '../../../assets/plus.svg';
-import { useDispatch } from '../../../hooks';
-import { addColumn } from '../../../store/reducers/kanbanSlice';
+import plusIcon from '../../../../assets/plus.svg';
+import { useDispatch } from '../../../../hooks';
+import { addColumn } from '../../../../store/reducers/kanbanSlice';
 import styles from './AddColumn.module.scss';
 
 export const AddColumn: React.FC = () => {

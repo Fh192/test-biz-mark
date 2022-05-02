@@ -1,7 +1,7 @@
 import React from 'react';
 import playIcon from '../../../../../../assets/play.svg';
 import playActiveIcon from '../../../../../../assets/playActive.svg';
-import { useTimer } from '../../../../../../hooks';
+import { useTimer } from '../../../../../../../hooks';
 import styles from './Timer.module.scss';
 
 interface Props {

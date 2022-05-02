@@ -1,20 +1,20 @@
 import classNames from 'classnames/bind';
 import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import branchIcon from '../../../../../assets/branch.svg';
-import burgerIcon from '../../../../../assets/burger.svg';
-import playIcon from '../../../../../assets/play.svg';
-import playActiveIcon from '../../../../../assets/playActive.svg';
-import { useDispatch, useTimer } from '../../../../../hooks';
+import branchIcon from '../../../../../../assets/branch.svg';
+import burgerIcon from '../../../../../../assets/burger.svg';
+import playIcon from '../../../../../../assets/play.svg';
+import playActiveIcon from '../../../../../../assets/playActive.svg';
+import { useDispatch, useTimer } from '../../../../../../hooks';
 import {
   setCompletionDate,
   toggleCompletion,
-} from '../../../../../store/reducers/kanbanSlice';
-import { ITask } from '../../../../../types/task';
-import { Checkbox } from '../../../../shared/Checkbox/Checkbox';
-import { Subtasks } from '../../../Subtasks/Subtasks';
-import { TaskDetails } from '../../../TaskDetails/TaskDetails';
-import { TaskTime } from '../../../TaskTime/TaskTime';
+} from '../../../../../../store/reducers/kanbanSlice';
+import { ITask } from '../../../../../../types/task';
+import { Checkbox } from '../../../../../shared/Checkbox/Checkbox';
+import { Subtasks } from '../../../../Subtasks/Subtasks';
+import { TaskDetails } from '../../../../TaskDetails/TaskDetails';
+import { TaskTime } from '../../../../TaskTime/TaskTime';
 import { Deadline } from './Deadline/Deadline';
 import styles from './Task.module.scss';
 
@@ -33,6 +33,7 @@ export const Task: React.FC<Props> = ({ task, index }) => {
 
   const [showSubtasks, setShowSubtasks] = useState(false);
   const [showTaskDetails, setShowTaskDetails] = useState(false);
+  const [taskDragDisable, setTaskDragDisable] = useState(false);
 
   const setShowSubtasksHandler = () => {
     setShowSubtasks(showSubtasks => !showSubtasks);
@@ -55,7 +56,11 @@ export const Task: React.FC<Props> = ({ task, index }) => {
 
   return (
     <>
-      <Draggable draggableId={id} index={index}>
+      <Draggable
+        draggableId={id}
+        index={index}
+        isDragDisabled={taskDragDisable}
+      >
         {({ draggableProps, dragHandleProps, innerRef }) => (
           <li
             className={styles.task}
@@ -66,6 +71,7 @@ export const Task: React.FC<Props> = ({ task, index }) => {
             <header className={styles.header}>
               <div className={styles.inner}>
                 <Checkbox
+                  aria-label='завершить'
                   checked={completed}
                   onChange={toggleCompletionHandler}
                 />
@@ -112,7 +118,11 @@ export const Task: React.FC<Props> = ({ task, index }) => {
             </footer>
             {showSubtasks && (
               <div className={styles.subtasks}>
-                <Subtasks subtasksIds={subtasksIds} taskId={id} />
+                <Subtasks
+                  subtasksIds={subtasksIds}
+                  taskId={id}
+                  setTaskDragDisable={setTaskDragDisable}
+                />
               </div>
             )}
           </li>

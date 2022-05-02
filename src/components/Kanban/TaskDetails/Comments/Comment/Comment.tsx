@@ -1,13 +1,10 @@
 import React from 'react';
 import { IComment } from '../../../../../types/task';
+import { transformDate } from '../../../../../utils/transformDate';
 import styles from './Comment.module.scss';
 
 export const Comment: React.FC<IComment> = ({ id, text, author, date }) => {
-  const addDate = new Date(date).toLocaleString('ru', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric',
-  });
+  const { fullDate: addDate } = transformDate(date);
 
   return (
     <li className={styles.comment} key={id}>

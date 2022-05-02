@@ -28,7 +28,7 @@ const initialState: State = {
   columnsOrder: initialColumnsOrder,
   tasks: initialTasks,
   subtasks: initialSubtasks,
-  lastTaskCompletionDate: '2022-03-09T20:00:00.000Z',
+  lastTaskCompletionDate: '',
 };
 
 export const kanbanSlice = createSlice({
@@ -209,7 +209,6 @@ export const {
   addSubtask,
   setDeadline,
   toggleCompletion,
-
   reorderTasks,
   reorderSubtasks,
 } = kanbanSlice.actions;

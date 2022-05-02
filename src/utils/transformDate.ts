@@ -1,5 +1,6 @@
 export const transformDate = (dateValue: string | Date | number) => {
   const date = new Date(dateValue);
+  const dateInPast = date < new Date();
 
   const dayMonthDate = date.toLocaleString('default', {
     month: 'long',
@@ -12,5 +13,5 @@ export const transformDate = (dateValue: string | Date | number) => {
     year: 'numeric',
   });
 
-  return { dayMonthDate, fullDate };
+  return { dayMonthDate, fullDate, dateInPast };
 };

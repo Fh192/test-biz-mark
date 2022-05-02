@@ -29,9 +29,9 @@ export const Subtask: React.FC<Props> = ({
     <Draggable draggableId={id} index={index}>
       {({ draggableProps, dragHandleProps, innerRef }) => (
         <li
-          className={cx(['subtask', { completed }])}
           {...draggableProps}
           {...dragHandleProps}
+          className={cx(['subtask', { completed }])}
           ref={innerRef}
         >
           <div className={styles.inner}>
